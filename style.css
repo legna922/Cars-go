@@ -1,0 +1,23 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { margin: 0; padding: 12px; background: #0f0f12; color: #e1e1e6; }
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #292930; padding-bottom: 12px; flex-wrap: wrap; gap: 10px; }
+h1 { font-size: 1.4rem; color: #ffca28; margin: 0; }
+#user-info { font-size: 0.9rem; color: #b3b3b8; }
+
+.card { background: #18181c; padding: 16px; margin-top: 16px; border-radius: 12px; border: 1px solid #292930; }
+video { width: 100%; max-height: 240px; background: #000; border-radius: 8px; object-fit: cover; }
+button { background: #ffca28; color: #121212; border: none; padding: 12px 18px; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 8px; transition: background 0.2s; }
+button:hover { background: #e6b800; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 12px; }
+.grid-branches { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin-top: 10px; }
+
+.branch-card { background: #22222a; padding: 10px; border-radius: 8px; border: 1px solid #333340; cursor: pointer; text-align: center; }
+.branch-card:hover { border-color: #ffca28; }
+.branch-card h3 { font-size: 0.95rem; margin: 0 0 5px 0; color: #ffca28; }
+.branch-card p { font-size: 0.75rem; color: #aaa; margin: 0; }
+
+.item-card { background: #22222a; padding: 10px; border-radius: 8px; border: 1px solid #333340; text-align: center; }
+.item-card img { width: 100%; height: 95px; object-fit: cover; border-radius: 6px; }
+.item-card h4 { margin: 6px 0 2px 0; font-size: 0.9rem; }
+.item-card p { margin: 2px 0; font-size: 0.8rem; color: #888; }
