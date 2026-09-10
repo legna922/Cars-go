@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Cars & Carshow - Arbol de Progresion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚗 Capture Cars - Pro Edition</h1>
+        <div id="user-info">
+            <span id="user-name">Cargando...</span> | 
+            <span>Dinero: $<span id="user-money">0</span></span> | 
+            <span>Rango: <span id="user-rank">Novato</span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Captura de Cámara con IA / Algoritmo Simulado -->
+        <section id="camera-section" class="card">
+            <h2>1. Escáner de Autos (Cámara GPS)</h2>
+            <video id="video" autoplay playsinline></video>
+            <button id="btn-capture">📷 Escanear y Registrar Vehículo</button>
+            <canvas id="canvas" style="display:none;"></canvas>
+        </section>
+
+        <!-- 2. Árbol de Ramas y Progresión -->
+        <section id="tree-section" class="card">
+            <h2>2. Árbol de Desarrollo (Ramas de Especialización)</h2>
+            <div id="branches-container" class="grid-branches">
+                <div class="branch-card" onclick="selectBranch('Tuning')">
+                    <h3>⚡ Rama Tuning</h3>
+                    <p>Aumenta potencia y velocidad máxima en arrancones.</p>
+                </div>
+                <div class="branch-card" onclick="selectBranch('Estética')">
+                    <h3>🎨 Rama Estética</h3>
+                    <p>Bonificación de puntuación en eventos de Carshow.</p>
+                </div>
+                <div class="branch-card" onclick="selectBranch('Restauración')">
+                    <h3>🔧 Rama Restauración</h3>
+                    <p>Reduce el costo de reparación y reventa de autos.</p>
+                </div>
+            </div>
+            <p>Especialización activa: <strong id="active-branch">Ninguna</strong></p>
+        </section>
+
+        <!-- 3. Garaje Ampliado -->
+        <section id="garage-section" class="card">
+            <h2>3. Tu Garaje</h2>
+            <div id="garage-list" class="grid"></div>
+        </section>
+
+        <!-- 4. Carshow y Duelos de Arrancones -->
+        <section id="carshow-section" class="card">
+            <h2>4. Carshow y Duelos Online</h2>
+            <div id="carshow-list" class="grid"></div>
+        </section>
+    </main>
+
+    <!-- SDKs de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <!-- Scripts del Juego -->
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
